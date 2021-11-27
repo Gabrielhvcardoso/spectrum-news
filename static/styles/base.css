@@ -1,0 +1,38 @@
+html {
+  margin: 0;
+
+  --container-max-w: 1200px;
+
+  --color-background: #FAFAF9;
+  --color-background-hover: #e9e9e8;
+  --color-surface: #E7E5E4;
+  --color-surface-hover: #dad8d8;
+  --color-medium: #D6D3D1;
+  --color-medium-hover: #c2bfbd;
+
+  --text-muted: #57534E;
+  --text-normal: #1C1917;
+}
+
+body {
+  align-items: stretch;
+  background-color: var(--color-background);
+  color: var(--text-normal);
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+}
+
+a, span, button, sub, sob, b, i, u, mark, ul, ol, li, p, strong, small {
+  font-family: 'Cabin', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Spinnaker', sans-serif;
+}
+
+/* */
+
+.base-container {
+  padding: 12px calc((100vw - var(--container-max-w))/2) 64px;
+}

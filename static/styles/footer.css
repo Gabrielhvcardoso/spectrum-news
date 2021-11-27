@@ -1,0 +1,13 @@
+#app-footer {
+  background-color: var(--text-normal);
+  color: var(--color-background);
+  display: flex;
+  padding: 24px max(48px, calc((100vw - 1400px)/2));
+  margin: 0 -32px;
+}
+
+#app-footer .logo {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 32px;
+  letter-spacing: 0px;
+}

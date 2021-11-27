@@ -1,0 +1,45 @@
+#article {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#article > header > .cover {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#article > .details {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+}
+
+#article > .details > .avatar {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  height: 50px;
+  object-fit: cover;
+}
+
+#article > .details > .avatar + div {
+  display: flex;
+  flex-direction: column;
+}
+
+#article > .details > .avatar + div > strong {
+  font-size: large;
+}
+
+#article > .content {
+  font-size: large;
+}
+
+#article > .content * {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5px;
+  line-height: 150%;
+}

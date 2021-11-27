@@ -1,0 +1,52 @@
+#app-header {
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  padding: 12px calc((100vw - var(--container-max-w))/2);
+}
+
+#app-header > .logo {
+  color: var(--text-normal);
+  font-family: 'Abril Fatface', cursive;
+  font-size: 32px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+
+/* */
+
+#app-categories {
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  padding: 0 calc((100vw - var(--container-max-w))/2);
+}
+
+#app-categories-wrapper {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  margin: 0px -16px;
+}
+
+#app-categories-wrapper > a {
+  color: var(--text-muted);
+  height: 45px;
+  flex: 1 0 auto;
+  max-width: 200px;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#app-categories-wrapper > a:active {
+  color: #EA580C;
+}
+
+#app-categories-wrapper > a:hover {
+  background-color: var(--color-background-hover);
+}
