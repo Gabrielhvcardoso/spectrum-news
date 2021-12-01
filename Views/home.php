@@ -1,6 +1,13 @@
 <?php
 use Controllers\HomeController;
 $posts = HomeController::getPosts();
+
+$col1 = array_slice($posts, 0, 2); // 2
+$col2 = array_slice($posts, 2, 4); // 4
+$col3 = array_slice($posts, 6, 1); // 1
+$col4 = array_slice($posts, 7, 2); // 2
+$rest = array_slice($posts, 9);
+
 ?>
 
 <div class="base-container">
@@ -12,17 +19,17 @@ $posts = HomeController::getPosts();
         if (!empty($col1)) {
           ?>
             <div class="news-grid-column">
-              <article onclick="openArticle(1)">
-                <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
-            
-              <article onclick="openArticle(1)">
-                <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
+              <?php
+                foreach ($col1 as $p) {
+                  ?>
+                    <article onclick="openArticle(<?= $p['id'] ?>)">
+                      <img src="<?= $p["image"] ?>" />
+                      <h4><?= $p["title"] ?></h4>
+                      <span><?= $p["description"] ?></span>
+                    </article>                  
+                  <?php
+                }
+              ?>
             </div>
           <?php
         }
@@ -32,25 +39,16 @@ $posts = HomeController::getPosts();
         if (!empty($col2)) {
           ?>
             <div class="news-grid-column">
-              <article onclick="openArticle(1)">
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
-        
-              <article onclick="openArticle(1)">
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
-              
-              <article onclick="openArticle(1)">
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
-        
-              <article onclick="openArticle(1)">
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
+              <?php
+                foreach ($col2 as $p) {
+                  ?>
+                    <article onclick="openArticle(<?= $p['id'] ?>)">
+                      <h4><?= $p["title"] ?></h4>
+                      <span><?= $p["description"] ?></span>
+                    </article>                  
+                  <?php
+                }
+              ?>
             </div>
           <?php
         }
@@ -60,11 +58,17 @@ $posts = HomeController::getPosts();
         if (!empty($col3)) {
           ?>
             <div class="news-grid-column">
-              <article onclick="openArticle(1)" class="emphasis">
-                <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
+              <?php
+                foreach ($col3 as $p) {
+                  ?>
+                    <article onclick="openArticle(<?= $p['id'] ?>)" class="emphasis">
+                      <img src="<?= $p["image"] ?>" />
+                      <h3><?= $p["title"] ?></h3>
+                      <span><?= $p["description"] ?></span>
+                    </article>
+                  <?php
+                }
+              ?>
             </div>
           <?php
         }
@@ -74,17 +78,17 @@ $posts = HomeController::getPosts();
         if (!empty($col4)) {
           ?>
             <div class="news-grid-column">
-              <article onclick="openArticle(1)">
-                <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
-        
-              <article onclick="openArticle(1)">
-                <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
-                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
-              </article>
+              <?php
+                foreach ($col4 as $p) {
+                  ?>
+                    <article onclick="openArticle(<?= $p['id'] ?>)">
+                      <img src="<?= $p["image"] ?>" />
+                      <h4><?= $p["title"] ?></h4>
+                      <span><?= $p["description"] ?></span>
+                    </article>
+                  <?php
+                }
+              ?>
             </div>
           <?php
         }
