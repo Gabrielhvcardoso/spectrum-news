@@ -17,10 +17,14 @@
 
 #app-categories {
   align-items: stretch;
+  background-color: var(--color-background);
   display: flex;
   justify-content: center;
   height: 45px;
   padding: 0 calc((100vw - var(--container-max-w))/2);
+
+  position: sticky;
+  top: 0;
 }
 
 #app-categories-wrapper {
@@ -32,6 +36,7 @@
 }
 
 #app-categories-wrapper > a {
+  box-sizing: border-box;
   color: var(--text-muted);
   height: 45px;
   flex: 1 0 auto;
@@ -41,6 +46,12 @@
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+#app-categories-wrapper > a.active {
+  border-bottom: 3px solid #10B981;
+  color: #10B981;
+  font-weight: bold;
 }
 
 #app-categories-wrapper > a:active {

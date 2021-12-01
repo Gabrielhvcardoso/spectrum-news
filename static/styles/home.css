@@ -64,6 +64,15 @@
 
 /* List */
 
+#article-list-empty {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 24px;  
+}
+
 #article-list {
   display: flex;
   flex-direction: column;
@@ -97,4 +106,13 @@
   flex-direction: column;
   margin: 12px 24px;
   overflow: hidden;
+}
+
+#article-list > article > .info > :first-child {
+  margin-bottom: 8px;
+}
+
+#article-list > article > .info > small {
+  color: var(--text-muted);
+  margin-bottom: 24px;
 }

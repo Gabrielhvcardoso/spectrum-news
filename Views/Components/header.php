@@ -3,6 +3,8 @@
 use Controllers\HomeController;
 $categories = HomeController::indexCategories();
 
+$categoryId = intval(str_replace("/spectrum/category-", "", $_SERVER['REQUEST_URI']));
+
 ?>
 
 <header id="app-header">
@@ -14,7 +16,9 @@ $categories = HomeController::indexCategories();
     <?php
       foreach ($categories as $c) {
         ?>
-          <a href="/spectrum/category-<?= $c["id"] ?>"><?= $c["title"] ?></a>
+          <a href="/spectrum/category-<?= $c["id"] ?>"
+             <?= $categoryId === $c["id"] ? "class=\"active\"" : "" ?>
+          ><?= $c["title"] ?></a>
         <?php
       }
     ?>
