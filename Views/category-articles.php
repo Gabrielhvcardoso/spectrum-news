@@ -28,7 +28,7 @@ $empty = empty($posts);
           <?php
             foreach ($posts as $p) {
               ?>
-                <article>
+                <article onclick="openArticle(<?= $p['id'] ?>)">
                   <img src="<?= $p["image"] ?>" />
                   <div class="info">
                     <h2><?= $p["title"] ?></h2>

@@ -1,13 +1,13 @@
 <div class="base-container">
   <div id="news-grid">
     <div class="news-grid-column">
-      <article>
+      <article onclick="openArticle(1)">
         <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
       </article>
 
-      <article>
+      <article onclick="openArticle(1)">
         <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
@@ -15,29 +15,29 @@
     </div>
 
     <div class="news-grid-column">
-      <article>
+      <article onclick="openArticle(1)">
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
       </article>
 
-      <article>
+      <article onclick="openArticle(1)">
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
       </article>
       
-      <article>
+      <article onclick="openArticle(1)">
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
       </article>
 
-      <article>
+      <article onclick="openArticle(1)">
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
       </article>
     </div>
 
     <div class="news-grid-column">
-      <article class="emphasis">
+      <article onclick="openArticle(1)" class="emphasis">
         <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
         <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
@@ -45,13 +45,13 @@
     </div>
 
     <div class="news-grid-column">
-      <article>
+      <article onclick="openArticle(1)">
         <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
       </article>
 
-      <article>
+      <article onclick="openArticle(1)">
         <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit architecto recusandae. Qui, nobis ducimus autem odio iure ullam sit eum ipsa architecto voluptas assumenda ad, quae dolorem. Perspiciatis, debitis? </span>
@@ -64,7 +64,7 @@
   <section id="article-list">
     <h1>Mais notícias</h1>
 
-    <article>
+    <article onclick="openArticle(1)">
       <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
       <div class="info">
         <h2>Lorem, ipsum dolor sit amet consectetur adipisicing.</h2>
@@ -72,7 +72,7 @@
       </div>
     </article>
 
-    <article>
+    <article onclick="openArticle(1)">
       <img src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
       <div class="info">
         <h2>Lorem, ipsum dolor sit amet consectetur adipisicing.</h2>
