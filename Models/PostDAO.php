@@ -6,6 +6,27 @@ use Classes\Post;
 use Database\ConnectionPDO;
 
 class PostDAO {
+  public function readAll(int $offset = 0, int $limit = 10) {
+    $connection = ConnectionPDO::getInstance();
+    $query = "SELECT
+      id,
+      title,
+      image,
+      TO_CHAR(timestamp, 'DD/MM/YYYY HH24:MI:SS') AS timestamp,
+      description FROM post
+    ORDER BY timestamp DESC, id DESC
+    OFFSET :offset LIMIT :limit";
+
+    $statement = $connection->prepare($query);
+    $statement->bindValue(":offset", $offset, \PDO::PARAM_INT);
+    $statement->bindValue(":limit", $limit, \PDO::PARAM_INT);
+    $statement->execute();
+
+    $posts = $statement->fetchAll();
+    return $posts;
+
+  }
+
   public function read(int $id) {
     $connection = ConnectionPDO::getInstance();
     $query = "SELECT

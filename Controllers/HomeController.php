@@ -25,6 +25,11 @@ class HomeController {
     return $postModel->read($id);
   }
 
+  public static function getPosts(int $offset = 0, int $limit = 10) {
+    $postModel = new PostDAO();
+    return $postModel->readAll($offset, $limit);
+  }
+
   public static function getCategoryPosts(int $id, int $offset = 0, int $limit = 10) {
     $postModel = new PostDAO();
     return $postModel->readByCategory($id);
