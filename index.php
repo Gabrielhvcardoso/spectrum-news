@@ -27,5 +27,7 @@
   <?php include('./Views/Components/header.php'); ?>
   <?php include('./router.php'); ?>  
   <?php include('./Views/Components/footer.php'); ?>
+
+  <script src="./static/js/articles.js"></script>
 </body>
 </html>

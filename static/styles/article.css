@@ -1,3 +1,11 @@
+#article-empty {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #article {
   display: flex;
   flex-direction: column;
@@ -10,6 +18,16 @@
   max-height: 400px;
   object-fit: cover;
   object-position: center;
+}
+
+#article > header > h1 {
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+#article > header > a {
+  color: #059669;
+  text-decoration: none;
 }
 
 #article > .details {
@@ -35,6 +53,9 @@
 }
 
 #article > .content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
   font-size: large;
 }
 
@@ -42,4 +63,10 @@
   font-family: 'Merriweather', serif;
   letter-spacing: 0.5px;
   line-height: 150%;
+}
+
+#article > .content img {
+  align-self: center;
+  border-radius: 4px;
+  width: min(80%, 900px);
 }

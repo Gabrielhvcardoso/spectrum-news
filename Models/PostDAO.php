@@ -8,7 +8,17 @@ use Database\ConnectionPDO;
 class PostDAO {
   public function read(int $id) {
     $connection = ConnectionPDO::getInstance();
-    $query = "SELECT * FROM post WHERE id = :id";
+    $query = "SELECT
+        p.*,
+        TO_CHAR(p.timestamp, 'DD/MM/YYYY HH24:MI:SS') AS timestamp,
+        a.name AS \"authorName\",
+        a.image AS \"authorAvatar\",
+        c.id AS \"categoryId\",
+        c.title AS \"categoryTitle\"
+      FROM post AS p
+      INNER JOIN author AS a ON p.\"authorId\" = a.id
+      INNER JOIN category AS c ON p.\"categoryId\" = c.id
+      WHERE p.id = :id";
 
     $statement = $connection->prepare($query);
 
