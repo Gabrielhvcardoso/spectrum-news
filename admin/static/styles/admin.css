@@ -1,0 +1,75 @@
+#post-container {
+  align-items: center;
+  flex-direction: column !important;
+  justify-content: center;
+}
+
+/* */
+
+#admin-header {
+  align-items: center;
+  border-bottom: .3px solid #ededed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px calc((100vw - var(--container-max-w))/2);
+}
+
+#admin-header .logout-button {
+  color: var(--text-muted);
+  border: .3px solid #666;
+  border-radius: 4px;
+  padding: 4px 16px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* */
+
+#post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: min(90vw, 500px);
+}
+
+#post-nav > button {
+  background-color: #3B82F6;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 4px 12px;
+  transition: 200ms
+}
+
+#post-nav > button:hover {
+  background-color: #2563EB;
+}
+
+/* */
+
+#post-card {
+  align-items: stretch;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  padding: 16px 12px;
+  width: min(90vw, 500px);
+}
+
+#post-card > input, #post-card > textarea, #post-card > select {
+  border: .3px solid #ededed;
+  border-radius: 4px;
+  min-height: 28px;
+  padding: 0 12px;
+}
+
+#post-card > textarea {
+  padding: 12px;
+}

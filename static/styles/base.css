@@ -24,7 +24,7 @@ body {
   margin: 0 32px;
 }
 
-a, span, button, sub, sob, b, i, u, mark, ul, ol, li, p, strong, small {
+a, span, button, sub, sob, b, i, u, mark, ul, ol, li, p, strong, small, input, textarea {
   font-family: 'Cabin', sans-serif;
 }
 

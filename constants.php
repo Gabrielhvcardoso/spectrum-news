@@ -6,5 +6,6 @@ define('CLASSES', DIR . DS . 'Class');
 define('CONTROLLERS', DIR . DS . 'Controllers');
 define('DATABASE', DIR . DS . 'Database');
 define('MODELS', DIR . DS . 'Models');
+define('ADMIN', DIR . DS . 'admin');
 
-define('AUTOLOAD_CLASSES', [CLASSES, CONTROLLERS, MODELS, DATABASE]);
+define('AUTOLOAD_CLASSES', [CLASSES, CONTROLLERS, MODELS, DATABASE, ADMIN]);

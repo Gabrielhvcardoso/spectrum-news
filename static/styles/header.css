@@ -2,6 +2,7 @@
   align-items: center;
   display: flex;
   box-sizing: border-box;
+  justify-content: center;
   padding: 12px calc((100vw - var(--container-max-w))/2);
 }
 

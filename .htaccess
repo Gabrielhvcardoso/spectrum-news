@@ -1,10 +1,20 @@
 Options +FollowSymLinks
 RewriteEngine On
 
+# /index.php is responsible for all admin requests 
 RewriteCond %{REQUEST_URI} !=index.php
+RewriteCond %{REQUEST_URI} !(admin) [NC]
 RewriteCond %{REQUEST_URI} !.*\.png$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.jpg$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.css$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.gif$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.js$ [NC]
 RewriteRule .* index.php
+
+# admin/index.php is responsible for all admin/ requests 
+RewriteCond %{REQUEST_URI} !.*\.png$ [NC]
+RewriteCond %{REQUEST_URI} !.*\.jpg$ [NC]
+RewriteCond %{REQUEST_URI} !.*\.css$ [NC]
+RewriteCond %{REQUEST_URI} !.*\.gif$ [NC]
+RewriteCond %{REQUEST_URI} !.*\.js$ [NC]
+RewriteRule ^admin/(.*) admin/index.php 

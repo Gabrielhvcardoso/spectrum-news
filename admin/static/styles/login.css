@@ -1,0 +1,117 @@
+#login-page {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#login-card {
+  align-items: stretch;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  background-color: white;
+  padding: 24px;
+  width: min(90vw, 400px);
+}
+
+#login-card .form-error {
+  color: #DC2626;
+  margin: 4px 0 0 4px;
+}
+
+#login-card input {
+  border: .3px solid #ededed;
+  border-radius: 4px;
+  height: 30px;
+  padding: 0 16px;
+}
+
+#login-card footer {
+  align-items: stretch;
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+#login-card footer button {
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  flex: 1;
+  padding: 8px 0;
+}
+
+#login-card footer button:hover {
+  background-color: #E5E7EB;
+}
+
+#login-card footer button.primary {
+  background-color: #059669;
+  color: white;
+}
+
+#login-card footer button.primary:hover {
+  background-color: #047857;
+}
+
+/* 3D rotating cube */
+
+.cube {
+  --size: 75px;
+  --half: 37.5px;
+    
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+  margin: 50px 0;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  animation: cubeAnimation 8s linear infinite;
+}
+
+.cube .cf {
+  background-color: #A7F3D0;
+  border: 3px solid #fff;
+  inset: 0;
+  position: absolute;
+}
+
+.cube > .top {
+  transform: rotateX(90deg) translateZ(var(--half));
+}
+
+.cube > .bottom {
+  transform: rotateX(90deg) translateZ(calc(-1 * var(--half)));
+}
+
+.cube > .sides {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.cube > .sides > span {
+  transform: rotateY(calc(90deg * var(--i))) translateZ(var(--half));
+}
+
+
+@keyframes cubeAnimation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(-30deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(30deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(360deg);
+  }
+}

@@ -1,15 +1,15 @@
 <?php
   require_once('./constants.php');
   require_once('./loader.php');
+  require_once('./functions.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <base href="http://localhost/spectrum/" />
 
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spectrum | Your daily news</title>
 
